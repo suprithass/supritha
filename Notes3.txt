@@ -1,0 +1,116 @@
+RESTful API testing
+
+(i) negative testing on APIs
+
+(a) http method tampering
+(b) payload tampering
+(c) query parameter tampering
+(d) end point tampering
+(e) request headers tampering
+(f) protocol downgrade test [http instead of https]
+
+test execution is ran from TEST STEP, TEST CASE, TEST SUITE
+
+report is also generated
+
+======================================
+
+(ii) end to end testing scenario
+(iii) loop continuously
+(iv) delay
+(v) set time-out
+
+
+GET https://reqres.in/api/users/2
+
+valid id: 1 to 12
+invalid id : <1 , >12
+
+Bug#1: Method tampering is exposed ; the LIST USERS API is not rejected by the server with 405 response code, when the method used is unsupported at the server side
+
+Bug#2: payload tampering is exposed ; server side validations are failing at the API level for CREATE USER, UPDATE USER
+
+Bug#3: query parameter tampering is exposed ; server side validations are failing at the API level for LIST USERS API ; page#1 data is retrieved by the server when the query is to retrieve page#0 which is data security breach
+
+
+CREATE USER: POST https://reqres.in/api/users
+
+{
+    "name": "morpheus",
+    "job": "leader"
+}
+
+================
+
+GET http://thetestingworldapi.com/api/studentsDetails
+
+
+POST http://thetestingworldapi.com/api/studentsDetails
+
+PUT api/studentsDetails/935121
+
+DELETE api/studentsDetails/935121
+
+935121 is Kiran id
+
+================
+
+REST APIs
+
+(i) reqres.in
+(ii) testingworldapi.com
+
+Negative test scenarios
+execute at test step level, test case level, test suite level,
+generate all formats of test reports
+add assertions
+
+Property Transfer
+API chaining
+Delay
+generate complete report
+
+============
+
+${ #test-case-name#propertyName}
+
+log.info
+
+==================
+DATA DRIVEN TESTING
+
+TEXT - done
+XLS - done 
+
+GRID - done
+DATA GENERATOR - done
+
+DATA SINK-done
+
+DATABASE
+
+LOGS
+
+test step level
+test case level
+test suite level
+project level
+
+RUN FROM COMMAND LINE
+
+test runner
+
+
+"C:\Program Files\SmartBear\ReadyAPI-3.20.1\bin\testrunner.bat" -sEMP-TESTSUITE01 -r -a -j -f${WORKSPACE} -g -o "-RTestSuite Report" -FXML "-EDefault environment" "C:\Users\IQT\Desktop\Shaheen-Ready API tool\Day#3\EMPLOYEE-DATABASE-readyapi-project.xml"
+
+
+
+936880
+936878
+936877
+936875
+936861
+
+
+
+

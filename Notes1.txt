@@ -1,0 +1,115 @@
+(i) Respose body testing = DONE
+(ii) Response code testing = DONE
+(iii) Response headers testing = DONE
+
+Bug#1: Server details are exposed in response headers
+Bug#2: Connection is not closed [it is keep-alive] in response headers
+Bug#3: Access control allow origin should not be set to wild card character * instead whitelist the required IPs or domain names
+Bug#4: x-powered-by is exposing technology details about API framework used
+Bug#5: Response time is more for SINGLE USER API, CREATE USER API, DELETE USER
+
+(iv) Response time testing: <=100ms ; DONE
+(v) 
+
+
+Add multiple resources to the same end point
+Authentication enabled REST APIs
+generate test suite
+generate test case
+add assertions
+run & validate
+properties
+property transfer
+
+================
+RESTful APIs
+
+hierarchy
+
+Workspace --> Project --> Request --> Test Suite --> Test Case --> Test Step
+
+Project --> SOAP or REST project
+
+
+GET https://reqres.in/api/users?page=2
+
+method= GET
+protocol = https
+baseURL= reqres.in  // endPoint
+endPoint = /api/users // endPoint = path = resource = page
+queryparam: page=2
+
+============
+
+
+method= GET
+protocol = https
+endPoint= https://reqres.in
+resource = /api/users 
+queryparam: page=2
+
+====================
+
+GET https://reqres.in/api/users/2
+
+
+POST https://reqres.in/api/users
+
+
+PUT https://reqres.in/api/users/2
+
+DELETE https://reqres.in/api/users/2
+==============
+
+GET https://reqres.in/api/users?page=2
+
+GET https://reqres.in/api/users/2
+
+POST https://reqres.in/api/users
+
+PUT https://reqres.in/api/users/2
+
+PATCH https://reqres.in/api/users/2
+
+DELETE https://reqres.in/api/users/2
+
+POST https://reqres.in/api/register
+
+POST https://reqres.in/api/login
+
+======================
+
+1) Verify if the response code received is 200 OK
+2) Verify if the response time is less than 1 second/1000 ms
+3) Verify if the response code is not 4xx and 5xx
+4) Verify if content-type is present in response headers
+5) Verify if connection is present in response headers
+6) Verify if the response body received is JSON
+7) Verify if the response body contains mandatory strings
+8) Verify if response body doesnt contains errors, warnings
+9) Below are JSON related assertions
+
+(i) JSON path existance
+(ii) JSON count
+(iii) JSON regular expression
+(iv) JSON schema compliance
+(v) JSON match
+
+10) Sensitive data exposure
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

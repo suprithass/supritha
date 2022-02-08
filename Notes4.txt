@@ -1,0 +1,44 @@
+Command line execution
+
+lot of memory/RAM
+delayed
+not efficient/not reliable
+non GUI mode of execution
+
+integration possibilities are more [jenkins, github, gitlab, bamboo, hudson, bit bucket, jmeter, postman etc]
+
+generate a cmd
+
+project from cmd line = DONE
+test suite(s) from cmd line = DONE
+test case(s) from cmd line = DONE
+test step(s) from cmd line = not possible
+
+TestRunner.bat [Windows OS]
+TestRunner.sh [Mac OS, Linux OS]
+
+===============================
+Jenkins integration
+
+to start Jenkins,  java -jar jenkins.war
+
+"C:\Program Files\SmartBear\ReadyAPI-3.20.1\bin\testrunner.bat" "-sTEST SUITE-NEGATIVE" -r -a -j -f${WORKSPACE} "-RJUnit-Style HTML Report" -FXML "-EDefault environment" "C:\Users\IQT\Desktop\Shaheen-Ready API tool\Day#3\REST-APIs-NEGATIVE-TESTING-readyapi-project.xml"
+
+http://localhost:8080/job/ReadyAPI-Project2/build?token=12345
+===============================
+
+Github integration
+
+
+===============================
+Properties at different levels
+
+Monitors/Alert site/continuos testing
+
+SOAP APIs
+
+Assertions for SOAP APIs
+
+import collections from Postman to Ready API tool
+
+DOUBT SOLVING SESSION @ 4.15pm onwards
