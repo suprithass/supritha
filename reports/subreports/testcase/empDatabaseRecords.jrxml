@@ -1,0 +1,74 @@
+<jasperReport xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportTemplate" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <property name="ireport.encoding" value="UTF-8"/>
+   <template>"../../styles.jrtx"</template>
+   <!--FIELDS & PARAMS-->
+   <field name="CityName" class="java.lang.String"/>
+     <field name="FormattedAddress" class="java.lang.String"/>
+     <field name="Type" class="java.lang.String"/>
+     <field name="PlaceID" class="java.lang.String"/>
+     <field name="Status" class="java.lang.String"/>
+     <columnHeader>
+         <band height="59">
+             <staticText>
+                 <reportElement style="ColumnHeader" x="0" y="35" width="122" height="20"/>
+                 <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                 <text>CityName</text>
+             </staticText>
+             <staticText>
+                 <reportElement style="ColumnHeader" x="133" y="35" width="40" height="20"/>
+                 <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                 <text>FormattedAddress</text>
+             </staticText>
+            <staticText>
+                 <reportElement style="ColumnHeader" x="183" y="35" width="74" height="20"/>
+                 <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                 <text>Type</text>
+             </staticText>
+             <staticText>
+                 <reportElement style="ColumnHeader" x="265" y="35" width="200" height="20"/>
+                 <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                 <text>PlaceID</text>
+             </staticText>
+             <staticText>
+                 <reportElement style="ColumnHeader" x="465" y="35" width="70" height="20"/>
+                 <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                 <text>Status</text>
+            </staticText>
+             <staticText>
+                 <reportElement style="SmallHeader" x="0" y="0" width="535" height="34"/>
+                 <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                 <text>City data result</text>
+             </staticText>
+         </band>
+     </columnHeader>
+     <detail>
+             <band height="21">
+             <textField>
+                 <reportElement x="0" y="1" width="122" height="20"/>
+                 <textElement textAlignment="Left" verticalAlignment="Top"/>
+                 <textFieldExpression class="java.lang.String">$F{CityName}</textFieldExpression>
+             </textField>
+             <textField>
+             <reportElement x="133" y="1" width="50" height="20"/>
+             <textElement textAlignment="Left" verticalAlignment="Top"/>
+             <textFieldExpression class="java.lang.String">$F{FormattedAddress}</textFieldExpression>
+         </textField>
+         <textField isBlankWhenNull="true">
+             <reportElement x="183" y="1" width="74" height="20"/>
+             <textElement textAlignment="Left" verticalAlignment="Top"/>
+             <textFieldExpression class="java.lang.String">$F{Type}</textFieldExpression>
+         </textField>
+         <textField isStretchWithOverflow="true">
+             <reportElement x="265" y="1" width="200" height="20"/>
+             <textElement textAlignment="Left" verticalAlignment="Top"/>
+             <textFieldExpression class="java.lang.String">$F{PlaceID}</textFieldExpression>
+         </textField>
+         <textField isStretchWithOverflow="true">
+             <reportElement x="465" y="1" width="70" height="20"/>
+             <textElement textAlignment="Left" verticalAlignment="Top"/>
+             <textFieldExpression class="java.lang.String">$F{Status}</textFieldExpression>
+         </textField>
+     </band>
+     </detail>
+</jasperReport>
+This creates a tabular l
